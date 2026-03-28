@@ -1,0 +1,13 @@
+numpy<2
+torch==2.1.0
+transformers==4.46.3
+peft==0.13.2
+datasets==2.21.0
+evaluate==0.4.3
+rouge_score==0.1.2
+scikit-learn==1.5.2
+pandas==2.2.3
+sentencepiece==0.2.0
+accelerate==0.34.2
+safetensors==0.4.5
+tqdm==4.66.5
