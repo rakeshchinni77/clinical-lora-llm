@@ -1,0 +1,36 @@
+.git/
+.gitignore
+
+# Secrets and local environment files
+
+.env
+.env.\*
+!.env.example
+
+# Python virtualenvs and caches
+
+.venv/
+venv/
+**pycache**/
+\*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Logs and local temp files
+
+_.log
+_.tmp
+
+# Runtime artifacts (mounted as volumes)
+
+data/
+output/
+results/
+docs/
+
+# Editor/system files
+
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
