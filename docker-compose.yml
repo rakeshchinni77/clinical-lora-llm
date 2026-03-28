@@ -1,0 +1,62 @@
+services:
+  trainer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: clinical-lora-llm:latest
+    container_name: clinical-lora-trainer
+    env_file:
+      - .env
+    working_dir: /workspace
+    volumes:
+      - ./src:/workspace/src
+      - ./data:/workspace/data
+      - ./output:/workspace/output
+      - ./results:/workspace/results
+      - ./docs:/workspace/docs
+    entrypoint: ["/bin/bash", "-lc", "./src/main.sh"]
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          'python -c "import sys, torch; print(f''cuda_available={torch.cuda.is_available()}''); sys.exit(0)"',
+        ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+
+  trainer-gpu:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: clinical-lora-llm:latest
+    container_name: clinical-lora-trainer-gpu
+    profiles: ["gpu"]
+    env_file:
+      - .env
+    working_dir: /workspace
+    volumes:
+      - ./src:/workspace/src
+      - ./data:/workspace/data
+      - ./output:/workspace/output
+      - ./results:/workspace/results
+      - ./docs:/workspace/docs
+    entrypoint: ["/bin/bash", "-lc", "./src/main.sh"]
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          'nvidia-smi > /dev/null 2>&1 || python -c "import torch,sys; sys.exit(0 if torch.cuda.is_available() else 1)"',
+        ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
