@@ -1,0 +1,58 @@
+{
+  "base_model_metrics": {
+    "ROUGE-1": 0.12173641377115724,
+    "ROUGE-2": 0.04093774252464948,
+    "ROUGE-L": 0.08894130851131993,
+    "clinical_entity_recall": 0.2674166666666667
+  },
+  "fine_tuned_model_metrics": {
+    "ROUGE-1": 0.24632038753832386,
+    "ROUGE-2": 0.07650622778096217,
+    "ROUGE-L": 0.16226946319263114,
+    "clinical_entity_recall": 0.3705833333333333
+  },
+  "comparison": {
+    "rouge1_improvement": 0.12458397376716662,
+    "rouge2_improvement": 0.03556848525631268,
+    "rougeL_improvement": 0.07332815468131121,
+    "entity_recall_improvement": 0.10316666666666663
+  },
+  "sample_predictions": [
+    {
+      "example_id": "test-0",
+      "reference": "background: the purpose of this study was to perform the creating opportunities for parent empowerment (cope) program for iranian mothers and evaluate its effectiveness on stress, anxiety, and participation of mothers who have premature infants hospitalized in neonatal intensive care units (nicus).materials and methods: a randomized clinical trial was conducted with 90 mothers of premature infants hospitalized in the educational neonatal nicus of state hospitals affiliated to isfahan university of medical sciences. for measuring the variables, state - trait anxiety inventory, the parental stressor scale: neonatal intensive care, and the index of parental participation / hospitalized infant were used. intervention group received two phases of cope program. this program consisted of information and behavioral activities about the characteristics of premature infants. sessions interval was from 2 to 4 days. stress and anxiety were measured three times (before each phase and 2 - 4 days after the second phase). mothers participation was evaluated 2 - 4 days after the second phase. the t - test, 2, mann - whitney u test, and repeated measurement test were used for data analysis.results:m ... [truncated]",
+      "base_model_summary": "health care.",
+      "finetuned_model_summary": "nicus have been established in iran since about 1984, and today they are running in the state and private hospitals of 31 provinces under the supervision of a neonatologist. there are high - tech equipments for infants treatment in most of these wards and mothers can settle in specific rooms close to the ward, so that they can go to their infants to take care of them primarily based on their willing and abilities at the times. mothers can also visit their infants in specific hours, but they can not stay there and no health care is provided for them. the premature birth rate in the place of research, esfahan, isfahan, is about 12",
+      "base_entity_recall": 0.08333333333333333,
+      "finetuned_entity_recall": 0.16666666666666666
+    },
+    {
+      "example_id": "test-1",
+      "reference": "our (2014) model for the regulation of cognitive enhancement devices (ceds) received a great deal of interest from those involved in european device regulation and from academic commentators. further, since the publication of our recommendations, the number of manufacturers of brain stimulation devices for non - medical purposes has increased, underscoring the need for a regulatory response. in this paper, we clarify aspects of our original proposal and address additional regulatory issues beyond our original focus on the sale of devices. we begin with theoretical points pertaining to the definition of a ced and the distinction between treatment and enhancement. we then respond to practical challenges raised by the prospect of implementing our regulatory framework. next, we address some wider societal considerations relating to users and other stakeholders. finally, we revisit the broader regulatory context within which the various discussions are situated.",
+      "base_model_summary": "medical device would not be a medical device on the mdd definition.",
+      "finetuned_model_summary": "non - therapeutic devices, which do not aim to improve health problems, would not be medical devices on the mdd definition. our proposal was not to change the definition of health (nor treatment) but rather to bring some non - therapeutic devices, which do not aim to improve health problems, within the remit of the mdd. our proposals involved leaving the definition of a medical device used by the mdd unaltered. ceds would not be medical devices on the mdd definition. instead, an anci",
+      "base_entity_recall": 0.0,
+      "finetuned_entity_recall": 0.5
+    },
+    {
+      "example_id": "test-2",
+      "reference": "aim: to date, the available information regarding the quality of primary health care services in albania is scarce. the aim of our study was to assess the quality of primary health care services in albania based on physicians perceptions towards the quality of the services provided to the general population.methods:a cross - sectional study was conducted in january - march 2013 including a representative sample of 132 physicians (59 men aged 41.36.9 years and 73 women aged 43.74.8 years; overall response rate: 132/150 88%) providing primary health care services in several polyclinics (health centers) of tirana, the albanian capital city. a structured self - administered and anonymous questionnaire was applied including physicians perceptions regarding different dimensions of the quality of primary health care. binary logistic regression was used to assess the association of self - perceived quality of health care services with baseline characteristics of physicians.results:self-perceived adequate quality of health care services was positively related to the age of physicians, their working experience, female gender, a lower population served, and specialization in family medicine.c ... [truncated]",
+      "base_model_summary": "quality of primary health care services in albania) with a focus on family physicians perceptions towards the quality of primary health care services provided to the general population.",
+      "finetuned_model_summary": "quality of primary health care services in albania is a major issue in developing and transitional countries including albania, a former communist country in the western balkans which has undergone tremendous political and socioeconomic changes in the past two decades associated with significant health consequences. currently, the health care system in albania consists of three main pillars: primary, secondary and tertiary health care services (3). perceived quality is one of the principal determinants of utilization and non - utilization of health care services (6, 7), a major issue in developing and transitional countries including albania, a former communist country in the western balkans which has undergone tremendous political and socioeconomic",
+      "base_entity_recall": 0.6,
+      "finetuned_entity_recall": 0.4
+    }
+  ],
+  "base_model": {
+    "ROUGE-1": 0.12173641377115724,
+    "ROUGE-2": 0.04093774252464948,
+    "ROUGE-L": 0.08894130851131993,
+    "clinical_entity_recall": 0.2674166666666667
+  },
+  "finetuned_model": {
+    "ROUGE-1": 0.24632038753832386,
+    "ROUGE-2": 0.07650622778096217,
+    "ROUGE-L": 0.16226946319263114,
+    "clinical_entity_recall": 0.3705833333333333
+  }
+}

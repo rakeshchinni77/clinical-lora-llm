@@ -1,0 +1,16 @@
+{
+  "stable_run": {
+    "log_path": "results/logs/stable.log",
+    "final_metrics": {
+      "train_loss": 2.722765,
+      "eval_loss": 2.354984
+    }
+  },
+  "unstable_run": {
+    "log_path": "results/logs/unstable.log",
+    "final_metrics": {
+      "train_loss": 2.710003,
+      "eval_loss": 2.331447
+    }
+  }
+}
